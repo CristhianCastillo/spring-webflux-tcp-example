@@ -1,0 +1,28 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: "tcp-client"
+  devtools:
+    add-properties: false
+  h2:
+    console:
+      enabled: true
+      path: "/h2"
+  profiles:
+    include: null
+adapter:
+  tcp:
+    host: "localhost"
+    port: 10001
+    connection:
+      pool-size: 50
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,prometheus"
+  endpoint:
+    health:
+      probes:
+        enabled: true

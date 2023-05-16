@@ -1,0 +1,10 @@
+##Spring Configuration
+tcp:
+  server:
+    port: 10001
+
+spring:
+  application:
+    name: tcp-server
+  profiles:
+    include:
